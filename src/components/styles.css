@@ -1,0 +1,46 @@
+.input {
+  display: flex;
+  width: 90%;
+  position: relative;
+  align-items: center;
+}
+
+.input__box {
+  width: 100%;
+  border-radius: 5rem;
+  padding: 2rem 3rem;
+  font-size: 2.5rem;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 0.5rem var(--black);
+}
+
+.input__box:focus {
+  box-shadow: 0 0 1rem 100rem rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input__submit {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  margin: 1.2rem;
+  border-radius: 5rem;
+  right: 0;
+  border: none;
+  font-size: 1.5rem;
+  background-color: var(--orange);
+  transition: 0.2s all;
+  box-shadow: 0 0 1rem var(--warm-black);
+  color: var(--white);
+}
+
+.input__submit:hover {
+  background-color: var(--warm-orange);
+  cursor: pointer;
+}
+
+.input__submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 0.5rem var(--black);
+}
