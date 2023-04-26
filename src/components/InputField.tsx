@@ -1,9 +1,23 @@
+import { SetStateAction } from 'react'
 import './styles.css'
 
-const InputField = () => {
+interface Props {
+  todo: string
+  setTodo: React.Dispatch<React.SetStateAction<string>>
+}
+const InputField = ({ todo, setTodo }: Props) => {
+  const handleChange = (e: { target: { value: SetStateAction<string> } }) => {
+    setTodo(e.target.value)
+  }
   return (
     <form className="input">
-      <input type="input" placeholder="Enter a task" className="input__box" />
+      <input
+        type="input"
+        value={todo}
+        onChange={handleChange}
+        placeholder="Enter a task"
+        className="input__box"
+      />
       <button className="input__submit" type="submit">
         Go!
       </button>
