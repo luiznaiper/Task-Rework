@@ -7,8 +7,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --black: #20202a;
-  --warm-black: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
+  --black: #1e1e27;
+  --warm-black: #2c2c35;
   --just-white: #fff;
   --orange: #fb8122;
   --warm-orange: #f29d5d;
@@ -29,6 +29,6 @@ html {
 body {
   min-width: 320px;
   min-height: 100vh;
-  background: var(--warm-black);
+  background: var(--black);
   color: var(--just-white);
 }
