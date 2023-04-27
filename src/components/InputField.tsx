@@ -1,4 +1,4 @@
-import { SetStateAction } from 'react'
+import { SetStateAction, useRef } from 'react'
 import './styles.css'
 
 interface Props {
@@ -7,12 +7,21 @@ interface Props {
   handleAdd: (e: React.FormEvent) => void
 }
 const InputField = ({ todo, setTodo, handleAdd }: Props) => {
+  const inputRef = useRef<HTMLInputElement>(null)
+
   const handleChange = (e: { target: { value: SetStateAction<string> } }) => {
     setTodo(e.target.value)
   }
   return (
-    <form className="input" onSubmit={handleAdd}>
+    <form
+      className="input"
+      onSubmit={(e) => {
+        handleAdd(e)
+        inputRef.current?.blur()
+      }}
+    >
       <input
+        ref={inputRef}
         type="input"
         value={todo}
         onChange={handleChange}
