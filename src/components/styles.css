@@ -106,6 +106,18 @@ s {
   color: var(--grey);
 }
 
+.dragactive {
+  background-color: var(--orange);
+}
+
+.dragcomplete {
+  background-color: var(--warm-orange);
+}
+
+.drag {
+  box-shadow: 0 0 2rem var(--black);
+}
+
 @media (max-width: 1100px) {
   .todos {
     width: 45%;
