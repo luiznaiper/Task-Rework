@@ -5,12 +5,13 @@ import './styles.css'
 import { useEffect, useRef, useState } from 'react'
 
 type Props = {
+  index: number
   todo: Todo
   todos: Todo[]
   setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
 }
 
-const SingleTodo: React.FC<Props> = ({ todo, todos, setTodos }) => {
+const SingleTodo: React.FC<Props> = ({ index, todo, todos, setTodos }) => {
   const [edit, setEdit] = useState<boolean>(false)
   const [editTodo, setEditTodo] = useState<string>(todo.todo)
 
